@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "29461e96-0fbd-4685-87cb-8f5083ddba5b",
+		"name": "API RESTful com Spring Boot",
+		"description": "API para cadastro do pedido médico de uma pessoa\n\nContact Support:\n Name: Francisco Junior\n Email: francisdsj@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pedidos",
+			"item": [
+				{
+					"name": "Este endpoint tem como objetivo realizar a busca de todos os pedidos médicos cadastrados no sistema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/pedidos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Este endpoint tem como objetivo realizar o cadastro de um pedido médico de uma pessoa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"medico\":{\n      \"nome\":\"Carlos Perereira\",\n      \"numeroConselho\":201212585,\n      \"estadoConselho\":\"Ativo\",\n      \"tipoConselho\":\"CRM\"\n   },\n   \"paciente\":{\n      \"nome\":\"Francisco\",\n      \"dataNascimento\":\"1993-09-02T19:53:07Z\",\n      \"sexo\":\"Masculino\",\n      \"nomeMae\":\"Jacira Silva\",\n      \"endereco\":\"Rua Bento Camargo, 212\",\n      \"telefone\":\"11964617707\",\n      \"email\":\"francisdsj@gfmail.com\",\n      \"cpf\":\"4369848288\",\n      \"rg\":\"434464068\"\n   },\n   \"exames\":[\n      {\n         \"descricao\":\"Exame de sangue\",\n         \"dataValidade\":\"2021-03-30T19:53:07Z\"\n      },\n      {\n         \"descricao\":\"Exame de urina\",\n         \"dataValidade\":\"2022-03-02T19:53:07Z\"\n      },\n      {\n         \"descricao\":\"Exame de covid\",\n         \"dataValidade\":\"2022-03-02T19:53:07Z\"\n      }\n   ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/pedidos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exames\": [\n        {\n            \"dataValidade\": \"1942-06-18T19:56:21.780Z\",\n            \"descricao\": \"tempor cupidatat ea\",\n            \"id\": -50659167\n        },\n        {\n            \"dataValidade\": \"1977-06-16T15:34:11.253Z\",\n            \"descricao\": \"exercitation cupidatat in\",\n            \"id\": -33767474\n        }\n    ],\n    \"id\": 65777109,\n    \"medico\": {\n        \"estadoConselho\": \"Excepteur Ut\",\n        \"id\": 40219969,\n        \"nome\": \"eu\",\n        \"numeroConselho\": -42159674,\n        \"tipoConselho\": \"eiusmod ad magna\"\n    },\n    \"paciente\": {\n        \"cpf\": \"in tempor Lorem\",\n        \"dataNascimento\": \"1991-04-27T04:09:33.226Z\",\n        \"email\": \"incididunt nisi Duis elit\",\n        \"endereco\": \"sit esse in sunt tempor\",\n        \"id\": 33084235,\n        \"nome\": \"in sunt ex non exercitation\",\n        \"nomeMae\": \"sed est adipisicing\",\n        \"rg\": \"enim eu minim\",\n        \"sexo\": \"ad laborum Ut cupidatat\",\n        \"telefone\": \"Lorem laborum\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exames\": [\n        {\n            \"dataValidade\": \"1942-06-18T19:56:21.780Z\",\n            \"descricao\": \"tempor cupidatat ea\",\n            \"id\": -50659167\n        },\n        {\n            \"dataValidade\": \"1977-06-16T15:34:11.253Z\",\n            \"descricao\": \"exercitation cupidatat in\",\n            \"id\": -33767474\n        }\n    ],\n    \"id\": 65777109,\n    \"medico\": {\n        \"estadoConselho\": \"Excepteur Ut\",\n        \"id\": 40219969,\n        \"nome\": \"eu\",\n        \"numeroConselho\": -42159674,\n        \"tipoConselho\": \"eiusmod ad magna\"\n    },\n    \"paciente\": {\n        \"cpf\": \"in tempor Lorem\",\n        \"dataNascimento\": \"1991-04-27T04:09:33.226Z\",\n        \"email\": \"incididunt nisi Duis elit\",\n        \"endereco\": \"sit esse in sunt tempor\",\n        \"id\": 33084235,\n        \"nome\": \"in sunt ex non exercitation\",\n        \"nomeMae\": \"sed est adipisicing\",\n        \"rg\": \"enim eu minim\",\n        \"sexo\": \"ad laborum Ut cupidatat\",\n        \"telefone\": \"Lorem laborum\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exames\": [\n        {\n            \"dataValidade\": \"1942-06-18T19:56:21.780Z\",\n            \"descricao\": \"tempor cupidatat ea\",\n            \"id\": -50659167\n        },\n        {\n            \"dataValidade\": \"1977-06-16T15:34:11.253Z\",\n            \"descricao\": \"exercitation cupidatat in\",\n            \"id\": -33767474\n        }\n    ],\n    \"id\": 65777109,\n    \"medico\": {\n        \"estadoConselho\": \"Excepteur Ut\",\n        \"id\": 40219969,\n        \"nome\": \"eu\",\n        \"numeroConselho\": -42159674,\n        \"tipoConselho\": \"eiusmod ad magna\"\n    },\n    \"paciente\": {\n        \"cpf\": \"in tempor Lorem\",\n        \"dataNascimento\": \"1991-04-27T04:09:33.226Z\",\n        \"email\": \"incididunt nisi Duis elit\",\n        \"endereco\": \"sit esse in sunt tempor\",\n        \"id\": 33084235,\n        \"nome\": \"in sunt ex non exercitation\",\n        \"nomeMae\": \"sed est adipisicing\",\n        \"rg\": \"enim eu minim\",\n        \"sexo\": \"ad laborum Ut cupidatat\",\n        \"telefone\": \"Lorem laborum\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exames\": [\n        {\n            \"dataValidade\": \"1942-06-18T19:56:21.780Z\",\n            \"descricao\": \"tempor cupidatat ea\",\n            \"id\": -50659167\n        },\n        {\n            \"dataValidade\": \"1977-06-16T15:34:11.253Z\",\n            \"descricao\": \"exercitation cupidatat in\",\n            \"id\": -33767474\n        }\n    ],\n    \"id\": 65777109,\n    \"medico\": {\n        \"estadoConselho\": \"Excepteur Ut\",\n        \"id\": 40219969,\n        \"nome\": \"eu\",\n        \"numeroConselho\": -42159674,\n        \"tipoConselho\": \"eiusmod ad magna\"\n    },\n    \"paciente\": {\n        \"cpf\": \"in tempor Lorem\",\n        \"dataNascimento\": \"1991-04-27T04:09:33.226Z\",\n        \"email\": \"incididunt nisi Duis elit\",\n        \"endereco\": \"sit esse in sunt tempor\",\n        \"id\": 33084235,\n        \"nome\": \"in sunt ex non exercitation\",\n        \"nomeMae\": \"sed est adipisicing\",\n        \"rg\": \"enim eu minim\",\n        \"sexo\": \"ad laborum Ut cupidatat\",\n        \"telefone\": \"Lorem laborum\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"exames\": [\n        {\n            \"dataValidade\": \"1942-06-18T19:56:21.780Z\",\n            \"descricao\": \"tempor cupidatat ea\",\n            \"id\": -50659167\n        },\n        {\n            \"dataValidade\": \"1977-06-16T15:34:11.253Z\",\n            \"descricao\": \"exercitation cupidatat in\",\n            \"id\": -33767474\n        }\n    ],\n    \"id\": 65777109,\n    \"medico\": {\n        \"estadoConselho\": \"Excepteur Ut\",\n        \"id\": 40219969,\n        \"nome\": \"eu\",\n        \"numeroConselho\": -42159674,\n        \"tipoConselho\": \"eiusmod ad magna\"\n    },\n    \"paciente\": {\n        \"cpf\": \"in tempor Lorem\",\n        \"dataNascimento\": \"1991-04-27T04:09:33.226Z\",\n        \"email\": \"incididunt nisi Duis elit\",\n        \"endereco\": \"sit esse in sunt tempor\",\n        \"id\": 33084235,\n        \"nome\": \"in sunt ex non exercitation\",\n        \"nomeMae\": \"sed est adipisicing\",\n        \"rg\": \"enim eu minim\",\n        \"sexo\": \"ad laborum Ut cupidatat\",\n        \"telefone\": \"Lorem laborum\"\n    }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/pedidos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"pedidos"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080"
+		}
+	]
+}
