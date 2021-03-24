@@ -1,9 +1,9 @@
 # backend-simple-test
 
-Comandos para download das imagens docker e build do projeto:
+Download das imagens docker e build do projeto:
 
- - Imagem da aplicação:  docker pull ffjunior/backend-simple-test
- - Imagem do banco de dados: docker pull ffjunior/mysql-backend-simple-test
+ - Imagem da aplicação:   docker pull ffjunior/backend-simple-test
+ - Imagem do banco de dados MYSQL:  docker pull ffjunior/mysql-backend-simple-test
 
 
 ##### Interface para visualização dos endpoints da API com Swagger, após feito o download das imagens docker e feito build: #####
